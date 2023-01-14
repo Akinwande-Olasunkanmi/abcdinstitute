@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,200&family=Roboto:wght@300;400;500;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --main-color: #50beb5;
+    --secondary-color: #10C98F;
+}
+.navbar{
+    background: var(--main-color);
+}
+.navbar .container .navbar-brand{
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.navbar .collapse ul li a{
+    font-size: 15px;
+    font-weight: bold;
+} 
+
+/* banner */
+#banner{
+    background: url(/assets/img/school\ banner.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#banner .dark{
+    width: 100%;
+    height: 100%;
+    background: var(--main-color);
+    opacity: 0.4;
+    position: relative;
+}
+#banner .container{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+}
+
+#banner .container .text-content h1{
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+#banner .text-content .line{
+    background: #fff;
+    height: .3vh;
+    width: 17%;
+}
+#banner .container .text-content img{
+    width: 100px;
+}
+
+/* courses */
+#courses .container-fluid .row .card img{
+    height: 150px;
+}
+#courses .container-fluid .row .card:hover{
+    cursor: pointer;
+    transform: translateX(30deg);
+}
+
+/* bcontact */
+#bcontact{
+    background: url(/assets/img/abbb.jpg);
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#bcontact .container-fluid .text-content h1{
+    color: #1c8a1c;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+#login{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#login .title{
+    text-align: center;
+}
+#login .container{
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: skyblue;
+    box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+#login .container .forms{
+    display: flex;
+    align-items: center;
+    height: 440px;
+    width: 200%;
+    transition: height 0.2s ease;
+}
+
+#login .container .form{
+    padding: 30px;
+    padding: 30px;
+    background-color: #fff;
+    width: 200%;
+    transition: margin-left 0.18s ease;
+}
+#login .container.active .login{
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+#login .container .signup{
+    opacity: 0;
+    transition: opacity 0.09s ease;
+}
+#login .container.active .signup{
+    opacity: 1;
+    transition: opacity 0.02s ease;
+}
+
+#login .container.active .forms{
+    height: 600px;
+}
+.container .form .title{
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+    color: #085308;
+}
+.form .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: #085308;
+    border-radius: 25px;
+}
+.form .input-field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+.input-field input{
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid transparent;
+}
+.input-field input:is(:focus, :valid){
+    border-bottom-color: #085308;
+}
+.input-field i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) ~ i{
+    color: #085308;
+}
+.input-field i.icon{
+    left: 0;
+}
+.input-field i.showHidePw{
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.form .checkbox-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.checkbox-text .checkbox-content{
+    display: flex;
+    align-items: center;
+}
+.checkbox-content input{
+    margin: 0 8px -2px 4px;
+    accent-color: #085308;
+}
+.form .text{
+    color:  #085308;
+    font-size: 14px;
+}
+.form a.text{
+    color: #085308;
+    text-decoration: none;
+}
+.form a:hover{
+    text-decoration: underline;
+}
+
+.form .button{
+    margin-top: 35px;
+}
+.form .button input{
+    border: none;
+    background-color: #085308;
+    color: #fff;
+    letter-spacing: 3px;
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button input:hover{
+    background-color: #137713;
+}
+.form .login-signup{
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* tdashboard banner */
+#ban{
+    background: url(/assets/img/lect.jpg);
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#ba{
+    background: url(/assets/img/medicine.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* msg */
+.error{
+    background: tomato;
+    color: white;
+    padding: .5rem;
+}
+.success{
+    background: seagreen;
+    color: white;
+    padding: .5rem;
+    text-align: center;
+}
+
+
+/* media query */
+@media only screen and (max-width: 768px)
+{
+    
+}
