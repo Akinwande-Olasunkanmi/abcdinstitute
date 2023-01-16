@@ -261,6 +261,13 @@ html{
     background-attachment: fixed;
     background-size: cover;
 }
+#bant{
+    background: url(/assets/img/graduation.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
 
 /* msg */
 .error{
@@ -276,8 +283,3 @@ html{
 }
 
 
-/* media query */
-@media only screen and (max-width: 768px)
-{
-    
-}
